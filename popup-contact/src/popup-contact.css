@@ -1,0 +1,149 @@
+/* КОД САЙТА */
+*, :after, :before {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    font-family: Montserrat;
+    background-color: white;
+    height: 20000px;
+}
+/* КОД */
+.popup-contact {
+    font-family: Montserrat, Arial, Helvetica, sans-serif;
+    display: none;
+    height: 100%;
+    position: fixed;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+.popup-contact.show {
+    display: flex;
+    top: 0;
+    left: 0;
+}
+.popup-contact__container {
+    position: relative;
+    max-width: 401px;
+    width: 100%;
+    background-color: #fff;
+    text-align: center;
+    z-index: 2;
+}
+.popup-contact__container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    border: 3px solid #f9e167;
+    margin: 20px;
+    z-index: -1;
+}
+.popup-contact__close {
+    position: absolute;
+    top: -40px;
+    right: -30px;
+    border: none;
+    background-color: transparent;
+    fill: #e5e5e5;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 99999;
+}
+.popup-contact__img {
+    width: 100%;
+    object-fit: cover;
+    z-index: -10;
+    position: relative;
+}
+.popup-contact__box {
+    padding: 20px 40px 40px;
+    z-index: 20;
+}
+.popup-contact__title {
+    font-size: 16px;
+    line-height: 1.205;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+.popup-contact__text {
+    font-size: 13px;
+    line-height: 1;
+    margin-bottom: 30px;
+}
+.popup-contact__form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    max-width: 245px;
+    width: 100%;
+    margin: 0 auto;
+}
+.popup-contact__lable {
+    font-size: 12px;
+    line-height: 26px;
+    color: #504f4f; 
+}
+.popup-contact__input {
+    width: 100%;
+    padding: 20px 30px;
+    border: 1px solid #eee;
+
+}
+.popup-contact__btn {
+    font-size: 14px;
+    line-height: 1.205;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    width: 100%;
+    border: none;
+    padding: 20px 0;
+    border-radius: 30px;
+    cursor: pointer;
+}
+.popup-contact__btn_color {
+    background-color: #1ecde2;
+}
+.popup-contact__privacy {
+    font-size: 10px;
+    color: #ababab;
+    line-height: 1.2;  
+    max-width: 260px;
+    width: 100%;
+    margin: 0 auto;   
+}
+.popup-contact__privacy-link {
+    color: #ababab;
+    cursor: pointer;
+}
+@media screen and (max-width: 470px) {
+    .popup-contact__container {
+        min-height: 540px;
+        height: 100%;
+        width: 100%;
+        overflow-y: auto;
+        max-width: unset;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: self-start;
+    }
+    .popup-contact__img {
+        position: unset;
+        z-index: 2;
+    }
+    .popup-contact__close {
+        top: 4px;
+        right: 4px;
+    }
+}
+

@@ -1,0 +1,181 @@
+/* Для локальной разработки */
+*, :after, :before {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    font-family: Montserrat;
+    background-color: white;
+    height: 20000px;
+}
+/* КОД */
+.contact-discount {
+    font-family: Montserrat, Arial, Helvetica, sans-serif;
+    display: none;
+    height: 100%;
+    position: fixed;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+.contact-discount.show {
+    display: flex;
+    top: 0;
+    left: 0;
+}
+.contact-discount__container {
+    position: relative;
+    max-width: 401px;
+    min-height: 400px;
+    width: 100%;
+    background-color: #fff;
+    text-align: center;
+    z-index: 2;
+    top: 80px;
+}
+.contact-discount__close {
+    position: absolute;
+    top: 10px;
+    right: 24px;
+    border: none;
+    background-color: transparent;
+    fill: #e5e5e5;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 99999;
+}
+.contact-discount__header {
+    margin-top: -180px;
+    position: relative;
+    color: #fff;
+}
+
+.contact-discount__header-img {
+    width: 100%;
+    object-fit: cover;
+}
+.contact-discount__header-title {
+    font-size: 60px;
+    font-family: "BebasNeueBold";
+    line-height: 0.483;
+    position: absolute;
+    left: 50%;
+    top: 50%; 
+    transform: translate(-50%, -50%);
+}
+.contact-discount__header-subtitle {
+    font-size: 19px;
+    line-height: 1.526;
+}
+.contact-discount__header-number {
+    font-size: 50px;
+    font-family: "BebasNeueBold";
+    line-height: 0.58; 
+    position: absolute;
+    left: 20%;
+    top: 15%;
+}
+.contact-discount__header-percent {
+    font-size: 20px;
+    vertical-align: top;
+}
+.contact-discount__box {
+    padding: 0px 40px 40px;
+    z-index: 20;
+}
+.contact-discount__title {
+    font-size: 16px;
+    line-height: 1.205;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+.contact-discount__text {
+    font-size: 13px;
+    line-height: 1;
+    margin-bottom: 30px;
+}
+.contact-discount__form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    max-width: 245px;
+    width: 100%;
+    margin: 0 auto;
+}
+.contact-discount__lable {
+    font-size: 12px;
+    line-height: 26px;
+    color: #504f4f; 
+}
+.contact-discount__input {
+    width: 100%;
+    padding: 20px 30px;
+    border: 1px solid #eee;
+
+}
+.contact-discount__btn {
+    font-size: 14px;
+    line-height: 1.205;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    width: 100%;
+    border: none;
+    padding: 20px 0;
+    border-radius: 30px;
+    cursor: pointer;
+}
+.contact-discount__btn_color {
+    background-color: #1ecde2;
+}
+.contact-discount__privacy {
+    font-size: 10px;
+    color: #ababab;
+    line-height: 1.2;  
+    max-width: 260px;
+    width: 100%;
+    margin: 0 auto;   
+}
+.contact-discount__privacy-link {
+    color: #ababab;
+    cursor: pointer;
+}
+@media screen and (max-width: 470px) {
+    .contact-discount__container {
+        min-height: 540px;
+        height: 100%;
+        width: 100%;
+        overflow-y: auto;
+        max-width: unset;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: self-start;
+        top: 0;
+    }
+    .contact-discount__header {
+        margin: 0 auto;
+    }
+    .contact-discount__header-number {
+        font-size: 31px;
+        left: 21%;
+        top: 16%;
+    }
+    .contact-discount__header-title {
+        font-size: 50px;
+    }
+    .contact-discount__img {
+        position: unset;
+        z-index: 2;
+    }
+    .contact-discount__close {
+        top: 9px;
+        right: 17px;
+    }
+}
+
